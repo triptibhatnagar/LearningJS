@@ -46,17 +46,18 @@ for(let i = 1; i<=100 ; i++) {
 
 // Q-6 Write a program to check whether a number is prime or not 
 
-// using function
-let num = prompt("Enter a number to check whether it's prime or not");
-function isPrimeOrNot() {
-    if(num < 2) {
-        return "Not a Prime Number";
-    }
-    for(let i = 2 ; i< num/2 ; i++) { //the iteration is done till half ,because after half the number ,there is only one factor left i.e. the number itself 
-        if(num % i === 0) {
-            return "Not a Prime Number";
-        }
-    }
-    return "a Prime Number";
+let x = prompt("Enter a number to check whether its prime or not");
+
+let isPrimeOrNot = "a prime number";
+
+if(x<2) {
+    isPrimeOrNot = "not a prime number";
 }
-console.log(num,"is",isPrimeOrNot());
+
+for(let i=2 ; i<x ; i++) {
+    if(x%i == 0) {
+        isPrimeOrNot = "not a prime number";
+        break;
+    }
+}
+console.log(x,"is",isPrimeOrNot);
